@@ -1,0 +1,36 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: lightgray;
+  padding: 20px 50px;
+
+  li {
+    background: white;
+    width: 20%;
+    margin: 0 1%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr 0.5fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    margin-bottom: 10px;
+
+    .countryImg { 
+      display: flex;
+      align-items: center;
+
+      img {
+        max-height: 150px;
+        max-width: 100%;
+      }
+    }
+    .countryName {
+      margin: 0;
+    }
+    .countryDetails {
+      text-align: left;
+    }
+  }
+}
