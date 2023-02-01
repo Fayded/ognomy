@@ -1,6 +1,5 @@
 const express = require("express");
 const axios = require("axios");
-const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -8,6 +7,7 @@ app.get("/api/countries", (req, res) => {
   res.json('I am the countries route')
 });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+const server = app.listen(process.env.PORT || 3001, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
 });
