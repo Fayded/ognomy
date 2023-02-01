@@ -12,10 +12,7 @@ const App = () => {
         .then(response => response.data)
         .then(data => setCountries(data))
     }
-    loadCountries().then(() => {
-      const searchDetails = countries.map((country) => country.name)
-      console.log(searchDetails);
-    });
+    loadCountries();
   }, []);
   return (
     <main>
