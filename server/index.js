@@ -3,6 +3,10 @@ const axios = require("axios");
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.json('I am the index route')
+});
+
 app.get("/api/countries", (req, res) => {
   res.json('I am the countries route')
 });
